@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { PostCard, Categories, PostWidget } from "../components";
 
-const post = [
+const posts = [
   { title: "Testing 1", excerpt: "Testing for the post" },
   { title: "Testing 2", excerpt: "Testing for the post 2" },
 ];
@@ -14,7 +14,7 @@ export default function Home() {
       </Head>
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="lg:col-span-8 col-span-1">
-          {post.map((post) => (
+          {posts.map((post) => (
             <PostCard post={post} key={post.title} />
           ))}
         </div>
